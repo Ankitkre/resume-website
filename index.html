@@ -285,85 +285,6 @@ section h2::after{
   box-shadow:0 15px 30px rgba(0,0,0,0.10);
 }
 
-   /* =========================
-   EDUCATION TIMELINE
-========================= */
-
-.timeline{
-  position:relative;
-  max-width:900px;
-  margin:0 auto;
-  padding:20px 0;
-}
-
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:0;
-  bottom:0;
-  width:3px;
-  background:var(--primary);
-  transform:translateX(-50%);
-}
-
-.timeline-item{
-  position:relative;
-  width:50%;
-  padding:20px 40px;
-}
-
-.timeline-item:nth-child(odd){
-  left:0;
-  text-align:right;
-}
-
-.timeline-item:nth-child(even){
-  left:50%;
-}
-
-.timeline-dot{
-  position:absolute;
-  top:30px;
-  width:16px;
-  height:16px;
-  background:var(--primary);
-  border:4px solid white;
-  border-radius:50%;
-  box-shadow:0 0 0 2px var(--primary);
-}
-
-.timeline-item:nth-child(odd) .timeline-dot{
-  right:-8px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot{
-  left:-8px;
-}
-
-.timeline-content{
-  background:white;
-  padding:22px;
-  border-radius:14px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
-}
-
-.timeline-content h3{
-  margin-bottom:6px;
-  font-size:18px;
-}
-
-.timeline-content p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-.timeline-year{
-  display:inline-block;
-  margin-top:8px;
-  font-weight:600;
-  color:var(--primary);
-}
 .card h3{
   margin-bottom:10px;
   font-size:18px;
@@ -373,6 +294,7 @@ section h2::after{
   color:var(--muted);
   font-size:14px;
 }
+
 
 /* =========================
    EDUCATION TIMELINE
@@ -435,6 +357,14 @@ section h2::after{
   padding:22px;
   border-radius:14px;
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.timeline-content:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.10);
 }
 
 .timeline-content h3{
@@ -453,6 +383,8 @@ section h2::after{
   font-weight:600;
   color:var(--primary);
 }
+
+
 /* =========================
    EXPERIENCE / PROJECT LIST
 ========================= */
@@ -545,6 +477,8 @@ footer{
   }
 
 
+  /* Hero */
+
   .hero{
     min-height:100vh;
     padding:160px 20px 80px;
@@ -564,6 +498,8 @@ footer{
   }
 
 
+  /* Sections */
+
   section{
     padding:70px 20px;
   }
@@ -573,11 +509,40 @@ footer{
   }
 
 
+  /* Cards */
+
   .card{
     width:100%;
     max-width:400px;
   }
 
+
+  /* Education Timeline */
+
+  .timeline::before{
+    left:10px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even){
+    width:100%;
+    left:0;
+    text-align:left;
+    padding:20px 20px 20px 40px;
+  }
+
+  .timeline-item:nth-child(odd){
+    text-align:left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot{
+    left:2px;
+    right:auto;
+  }
+
+
+  /* Contact */
 
   .contact-card{
     padding:30px 20px;
@@ -728,48 +693,85 @@ footer{
 
 
 <!-- =========================
-     EDUCATION
+     EDUCATION TIMELINE
 ========================= -->
 
 <section id="education">
 
   <h2>Education</h2>
 
-  <div class="card-container">
+  <div class="timeline">
 
-    <div class="card">
 
-      <h3>IIM Bangalore</h3>
+    <!-- IIM Bangalore -->
 
-      <p>
-        BBA DBE (Pursuing)
-      </p>
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+
+        <h3>IIM Bangalore</h3>
+
+        <p>
+          BBA DBE (Pursuing)
+        </p>
+
+        <span class="timeline-year">
+          2024 - Present
+        </span>
+
+      </div>
 
     </div>
 
 
-    <div class="card">
+    <!-- Class 12 -->
 
-      <h3>
-        Manan Vidya Manrakhan Mahto School
-      </h3>
+    <div class="timeline-item">
 
-      <p>
-        Class 10
-      </p>
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+
+        <h3>
+          ST Jagat Gyan Senior Secondary School
+        </h3>
+
+        <p>
+          Class 12
+        </p>
+
+        <span class="timeline-year">
+          2022 - 2023
+        </span>
+
+      </div>
 
     </div>
 
 
-    <div class="card">
+    <!-- Class 10 -->
 
-      <h3>
-        ST Jagat Gyan Senior Secondary School
-      </h3>
+    <div class="timeline-item">
 
-      <p>
-        Class 12
-      </p>
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+
+        <h3>
+          Manan Vidya Manrakhan Mahto School
+        </h3>
+
+        <p>
+          Class 10
+        </p>
+
+        <span class="timeline-year">
+          2020 - 2021
+        </span>
+
+      </div>
 
     </div>
 
@@ -802,7 +804,7 @@ footer{
       <ul class="card-list">
 
         <li>
-          Created content for Rangoli Artist Shikha Sharma
+          Created content for Rangoli artist Shikha Sharma
         </li>
 
         <li>
