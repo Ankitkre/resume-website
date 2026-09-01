@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -423,6 +423,97 @@ section h2::after{
 
 
 /* =========================
+   PROJECTS TIMELINE
+========================= */
+
+.project-timeline{
+  position:relative;
+  max-width:1000px;
+  margin:0 auto;
+  padding:20px 0;
+}
+
+.project-timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:var(--primary);
+  transform:translateX(-50%);
+}
+
+.project-item{
+  position:relative;
+  width:50%;
+  padding:25px 50px;
+}
+
+.project-item:nth-child(odd){
+  left:0;
+  text-align:right;
+}
+
+.project-item:nth-child(even){
+  left:50%;
+  text-align:left;
+}
+
+.project-dot{
+  position:absolute;
+  top:35px;
+  width:18px;
+  height:18px;
+  background:var(--primary);
+  border:4px solid white;
+  border-radius:50%;
+  box-shadow:0 0 0 2px var(--primary);
+  z-index:2;
+}
+
+.project-item:nth-child(odd) .project-dot{
+  right:-9px;
+}
+
+.project-item:nth-child(even) .project-dot{
+  left:-9px;
+}
+
+.project-content{
+  background:white;
+  padding:28px;
+  border-radius:16px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-content:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.10);
+}
+
+.project-content h3{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.project-type{
+  display:inline-block;
+  font-size:13px;
+  font-weight:600;
+  color:var(--primary);
+  margin-bottom:12px;
+}
+
+.project-content .card-list{
+  margin-top:10px;
+}
+
+
+/* =========================
    CONTACT SECTION
 ========================= */
 
@@ -475,6 +566,8 @@ footer{
 ========================= */
 
 @media (max-width:768px){
+
+  /* Navigation */
 
   nav{
     padding:15px 20px;
@@ -562,6 +655,32 @@ footer{
   }
 
 
+  /* Projects Timeline */
+
+  .project-timeline::before{
+    left:10px;
+  }
+
+  .project-item,
+  .project-item:nth-child(even),
+  .project-item:nth-child(odd){
+    width:100%;
+    left:0;
+    text-align:left;
+    padding:20px 20px 20px 40px;
+  }
+
+  .project-item:nth-child(odd) .project-dot,
+  .project-item:nth-child(even) .project-dot{
+    left:1px;
+    right:auto;
+  }
+
+  .project-content{
+    padding:22px;
+  }
+
+
   /* Contact */
 
   .contact-card{
@@ -600,6 +719,14 @@ footer{
 
   .skill-pill{
     font-size:14px;
+  }
+
+  .project-content h3{
+    font-size:18px;
+  }
+
+  .project-type{
+    font-size:12px;
   }
 
 }
@@ -657,12 +784,12 @@ footer{
       </a>
 
       <a
-  href="https://drive.google.com/file/d/10EzjrD9WXoe4wxnhT1TkDH0dNTxyusuL/view?usp=sharing"
-  class="btn resume-btn"
-  target="_blank"
-  rel="noopener noreferrer">
-  Download Resume
-</a>
+        href="https://drive.google.com/file/d/10EzjrD9WXoe4wxnhT1TkDH0dNTxyusuL/view?usp=sharing"
+        class="btn resume-btn"
+        target="_blank"
+        rel="noopener noreferrer">
+        Download Resume
+      </a>
 
     </div>
 
@@ -743,7 +870,9 @@ footer{
 
       <div class="timeline-content">
 
-        <h3>IIM Bangalore</h3>
+        <h3>
+          IIM Bangalore
+        </h3>
 
         <p>
           BBA DBE (Pursuing)
@@ -820,127 +949,156 @@ footer{
 
   <h2>Projects & Internships</h2>
 
-  <div class="card-container">
+  <div class="project-timeline">
+
+
+    <!-- Apna Green Products -->
+
+    <div class="project-item">
+
+      <div class="project-dot"></div>
+
+      <div class="project-content">
+
+        <h3>
+          Apna Green Products
+        </h3>
+
+        <span class="project-type">
+          Live Project | IIM Bangalore
+        </span>
+
+        <ul class="card-list">
+
+          <li>
+            Conducted competitor research and analyzed eco-friendly sanitary product brands
+          </li>
+
+          <li>
+            Recommended strategies for Instagram growth, retail expansion and product awareness
+          </li>
+
+          <li>
+            Contributed to packaging, pricing and digital business recommendations
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- GoodGum -->
+
+    <div class="project-item">
+
+      <div class="project-dot"></div>
+
+      <div class="project-content">
+
+        <h3>
+          GoodGum
+        </h3>
+
+        <span class="project-type">
+          Social Media Marketing | IIM Bangalore
+        </span>
+
+        <ul class="card-list">
+
+          <li>
+            Collaborated with the GoodGum team to understand the brand and its marketing needs
+          </li>
+
+          <li>
+            Developed social media marketing strategies and recommendations
+          </li>
+
+          <li>
+            Created sample Canva creatives and contributed to the team's marketing presentation
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
 
 
     <!-- Indori Artist -->
 
-    <div class="card">
-       
-<!-- Apna Green Products -->
+    <div class="project-item">
 
-<div class="card">
+      <div class="project-dot"></div>
 
-  <h3>
-    Apna Green Products
-  </h3>
+      <div class="project-content">
 
-  <p>
-    Live Project | IIM Bangalore
-  </p>
+        <h3>
+          Indori Artist
+        </h3>
 
-  <ul class="card-list">
+        <span class="project-type">
+          3-Month Internship | Content Writer & Creator
+        </span>
 
-    <li>
-      Conducted competitor research and analyzed eco-friendly sanitary product brands
-    </li>
+        <ul class="card-list">
 
-    <li>
-      Recommended strategies for Instagram growth, retail expansion and product awareness
-    </li>
+          <li>
+            Created content for Rangoli artist Shikha Sharma
+          </li>
 
-    <li>
-      Contributed to packaging, pricing and digital business recommendations
-    </li>
+          <li>
+            Coordinated with the team during content creation
+          </li>
 
-  </ul>
+          <li>
+            Worked collaboratively on creative content
+          </li>
 
-</div>
+        </ul>
 
-       <!-- GoodGum -->
-
-<div class="card">
-
-  <h3>
-    GoodGum
-  </h3>
-
-  <p>
-    Social Media Marketing | IIM Bangalore
-  </p>
-
-  <ul class="card-list">
-
-    <li>
-      Collaborated with the GoodGum team to understand the brand and its marketing needs
-    </li>
-
-    <li>
-      Developed social media marketing strategies and recommendations
-    </li>
-
-    <li>
-      Created sample Canva creatives and contributed to the team's marketing presentation
-    </li>
-
-  </ul>
-
-</div>
-       
-      <h3>Indori Artist</h3>
-
-      <p>
-        3-Month Internship as Content Writer and Creator
-      </p>
-
-      <ul class="card-list">
-
-        <li>
-          Created content for Rangoli artist Shikha Sharma
-        </li>
-
-        <li>
-          Coordinated with the team during content creation
-        </li>
-
-        <li>
-          Worked collaboratively on creative content
-        </li>
-
-      </ul>
+      </div>
 
     </div>
 
 
     <!-- Concentrix -->
 
-    <div class="card">
+    <div class="project-item">
 
-      <h3>
-        Concentrix (Amazon India)
-      </h3>
+      <div class="project-dot"></div>
 
-      <p>
-        3-Month Internship in Customer Support
-      </p>
+      <div class="project-content">
 
-      <ul class="card-list">
+        <h3>
+          Concentrix (Amazon India)
+        </h3>
 
-        <li>
-          Handled customer queries related to large appliances
-        </li>
+        <span class="project-type">
+          3-Month Internship | Customer Support
+        </span>
 
-        <li>
-          Assisted customers with ACs, refrigerators and other products
-        </li>
+        <ul class="card-list">
 
-        <li>
-          Identified product-related issues and helped customers find suitable solutions
-        </li>
+          <li>
+            Handled customer queries related to large appliances
+          </li>
 
-      </ul>
+          <li>
+            Assisted customers with ACs, refrigerators and other products
+          </li>
+
+          <li>
+            Identified product-related issues and helped customers find suitable solutions
+          </li>
+
+        </ul>
+
+      </div>
 
     </div>
+
 
   </div>
 
