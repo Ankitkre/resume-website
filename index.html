@@ -285,6 +285,85 @@ section h2::after{
   box-shadow:0 15px 30px rgba(0,0,0,0.10);
 }
 
+   /* =========================
+   EDUCATION TIMELINE
+========================= */
+
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:0 auto;
+  padding:20px 0;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:var(--primary);
+  transform:translateX(-50%);
+}
+
+.timeline-item{
+  position:relative;
+  width:50%;
+  padding:20px 40px;
+}
+
+.timeline-item:nth-child(odd){
+  left:0;
+  text-align:right;
+}
+
+.timeline-item:nth-child(even){
+  left:50%;
+}
+
+.timeline-dot{
+  position:absolute;
+  top:30px;
+  width:16px;
+  height:16px;
+  background:var(--primary);
+  border:4px solid white;
+  border-radius:50%;
+  box-shadow:0 0 0 2px var(--primary);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+  right:-8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+  left:-8px;
+}
+
+.timeline-content{
+  background:white;
+  padding:22px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+.timeline-content h3{
+  margin-bottom:6px;
+  font-size:18px;
+}
+
+.timeline-content p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.timeline-year{
+  display:inline-block;
+  margin-top:8px;
+  font-weight:600;
+  color:var(--primary);
+}
 .card h3{
   margin-bottom:10px;
   font-size:18px;
@@ -295,7 +374,85 @@ section h2::after{
   font-size:14px;
 }
 
+/* =========================
+   EDUCATION TIMELINE
+========================= */
 
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:0 auto;
+  padding:20px 0;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:var(--primary);
+  transform:translateX(-50%);
+}
+
+.timeline-item{
+  position:relative;
+  width:50%;
+  padding:20px 40px;
+}
+
+.timeline-item:nth-child(odd){
+  left:0;
+  text-align:right;
+}
+
+.timeline-item:nth-child(even){
+  left:50%;
+}
+
+.timeline-dot{
+  position:absolute;
+  top:30px;
+  width:16px;
+  height:16px;
+  background:var(--primary);
+  border:4px solid white;
+  border-radius:50%;
+  box-shadow:0 0 0 2px var(--primary);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+  right:-8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+  left:-8px;
+}
+
+.timeline-content{
+  background:white;
+  padding:22px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+.timeline-content h3{
+  margin-bottom:6px;
+  font-size:18px;
+}
+
+.timeline-content p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.timeline-year{
+  display:inline-block;
+  margin-top:8px;
+  font-weight:600;
+  color:var(--primary);
+}
 /* =========================
    EXPERIENCE / PROJECT LIST
 ========================= */
