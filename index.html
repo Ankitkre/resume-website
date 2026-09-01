@@ -192,6 +192,26 @@ nav a:hover::after{
 
 
 /* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.resume-btn{
+  background:#222;
+}
+
+.resume-btn:hover{
+  background:#444;
+}
+
+
+/* =========================
    SECTIONS
 ========================= */
 
@@ -630,9 +650,21 @@ footer{
       BBA DBE Student | Content Creator | Customer Support Professional
     </p>
 
-    <a href="#about" class="btn">
-      Know More
-    </a>
+    <div class="hero-buttons">
+
+      <a href="#about" class="btn">
+        Know More
+      </a>
+
+      <a
+        href="https://drive.google.com/uc?export=download&id=10EzjrD9WXoe4wxnhT1TkDH0dNTxyusuL"
+        class="btn resume-btn"
+        target="_blank"
+        rel="noopener noreferrer">
+        Download Resume
+      </a>
+
+    </div>
 
   </div>
 
@@ -648,9 +680,10 @@ footer{
   <h2>About Me</h2>
 
   <p class="about-text">
-   I'm currently pursuing a Bachelor of Business Administration at IIM Bangalore. 
-   Through internships in customer support and content creation, I've developed strong communication and problem-solving skills, 
-   and I like to apply them in real-world business settings.
+    I am currently pursuing a Bachelor of Business Administration at IIM Bangalore.
+    Through internships in customer support and content creation, I have developed
+    strong communication and problem-solving skills, and I like to apply them
+    in real-world business settings.
   </p>
 
 </section>
