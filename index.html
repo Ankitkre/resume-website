@@ -178,9 +178,10 @@ nav a:hover::after{
   text-decoration:none;
   border-radius:8px;
   font-weight:600;
-  transition:transform 0.3s ease,
-             background 0.3s ease,
-             box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn:hover{
@@ -245,8 +246,9 @@ section h2::after{
   padding:10px 20px;
   border-radius:30px;
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
-  transition:transform 0.3s ease,
-             box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .skill-pill:hover{
@@ -268,13 +270,14 @@ section h2::after{
 
 .card{
   background:white;
-  width:280px;
+  width:300px;
   padding:25px;
   border-radius:14px;
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
-  transition:transform 0.3s ease,
-             box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover{
@@ -290,6 +293,23 @@ section h2::after{
 .card p{
   color:var(--muted);
   font-size:14px;
+}
+
+
+/* =========================
+   EXPERIENCE / PROJECT LIST
+========================= */
+
+.card-list{
+  text-align:left;
+  margin-top:18px;
+  padding-left:20px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.card-list li{
+  margin-bottom:8px;
 }
 
 
@@ -347,8 +367,6 @@ footer{
 
 @media (max-width:768px){
 
-  /* Navigation */
-
   nav{
     padding:15px 20px;
     flex-direction:column;
@@ -370,8 +388,6 @@ footer{
   }
 
 
-  /* Hero */
-
   .hero{
     min-height:100vh;
     padding:160px 20px 80px;
@@ -391,8 +407,6 @@ footer{
   }
 
 
-  /* Sections */
-
   section{
     padding:70px 20px;
   }
@@ -402,15 +416,11 @@ footer{
   }
 
 
-  /* Cards */
-
   .card{
     width:100%;
     max-width:400px;
   }
 
-
-  /* Contact */
 
   .contact-card{
     padding:30px 20px;
@@ -454,3 +464,335 @@ footer{
 
 </style>
 </head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+  <h2>Ankit</h2>
+
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<div class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+      Hello, I'm
+      <span class="highlight">Ankit</span>
+    </h1>
+
+    <img src="Profile.jpg.jpeg" alt="Ankit's Profile Photo">
+
+    <p>
+      BBA DBE Student | Content Creator | Customer Support Professional
+    </p>
+
+    <a href="#about" class="btn">
+      Know More
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <h2>About Me</h2>
+
+  <p class="about-text">
+    I am currently pursuing BBA DBE from IIM Bangalore.
+    I am passionate about communication, content creation,
+    and problem-solving. I enjoy gaining real-world experience
+    through internships and professional roles.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+  <h2>My Skills</h2>
+
+  <div class="skills">
+
+    <div class="skill-pill">
+      Communication Skills
+    </div>
+
+    <div class="skill-pill">
+      Content Writing
+    </div>
+
+    <div class="skill-pill">
+      Customer Handling
+    </div>
+
+    <div class="skill-pill">
+      Team Collaboration
+    </div>
+
+    <div class="skill-pill">
+      Basic HTML & CSS
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+  <h2>Education</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+
+      <h3>IIM Bangalore</h3>
+
+      <p>
+        BBA DBE (Pursuing)
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        Manan Vidya Manrakhan Mahto School
+      </h3>
+
+      <p>
+        Class 10
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        ST Jagat Gyan Senior Secondary School
+      </h3>
+
+      <p>
+        Class 12
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS & INTERNSHIPS
+========================= -->
+
+<section id="projects">
+
+  <h2>Projects & Internships</h2>
+
+  <div class="card-container">
+
+
+    <!-- Indori Artist -->
+
+    <div class="card">
+
+      <h3>Indori Artist</h3>
+
+      <p>
+        3-Month Internship as Content Writer and Creator
+      </p>
+
+      <ul class="card-list">
+
+        <li>
+          Created content for Rangoli artist Shreeka Sharma
+        </li>
+
+        <li>
+          Coordinated with the team during content creation
+        </li>
+
+        <li>
+          Worked collaboratively on creative content
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- Concentrix -->
+
+    <div class="card">
+
+      <h3>
+        Concentrix (Amazon India)
+      </h3>
+
+      <p>
+        3-Month Internship in Customer Support
+      </p>
+
+      <ul class="card-list">
+
+        <li>
+          Handled customer queries related to large appliances
+        </li>
+
+        <li>
+          Assisted customers with ACs, refrigerators and other products
+        </li>
+
+        <li>
+          Identified product-related issues and helped customers find suitable solutions
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+  <h2>Experience</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+
+      <h3>
+        Amazon NA - Teleperformance
+      </h3>
+
+      <p>
+        1 Year Experience in Customer Support & Client Handling
+      </p>
+
+      <ul class="card-list">
+
+        <li>
+          Provided customer support and handled client queries
+        </li>
+
+        <li>
+          Assisted customers in resolving service-related concerns
+        </li>
+
+        <li>
+          Developed communication and customer-handling skills
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <h2>Let's Connect</h2>
+
+  <div class="contact-card">
+
+    <p>
+      If you'd like to connect with me,
+      feel free to reach out.
+    </p>
+
+    <div class="contact-links">
+
+      <!-- Email -->
+
+      <a
+        href="mailto:iamankit015@gmail.com"
+        class="btn">
+        Email Me
+      </a>
+
+
+      <!-- LinkedIn -->
+
+      <a
+        href="https://www.linkedin.com/in/ankit-kumar-533249218/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn secondary-btn">
+        LinkedIn
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  © 2026 Ankit | Resume Website
+
+</footer>
+
+
+</body>
+
+</html>
